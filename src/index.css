@@ -14,7 +14,6 @@ header {
 main {
   background-color: #0b162b;
   padding: 20px 0 20px 0;
-  filter: drop-shadow(20 0 0.4rem black);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
 }
 
@@ -105,6 +104,27 @@ p {
   display: grid;
   grid-template-columns: 5fr 1fr;
   margin-top: 10px;
+}
+
+.logo {
+  position: absolute;
+  top: -5px;
+  right: 20px;
+  padding: 10px 20px 10px 20px;
+  border-radius: 5px;
+  background: #0b162b;
+  color: #bdbdbd;
+  font-size: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  text-align: right;
+}
+
+.logo-emoji {
+  font-size: 25px;
+}
+
+.logo-text {
+  font-size: 10px;
 }
 
 #clock {
