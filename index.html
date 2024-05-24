@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/index.css" />
+    <link rel="stylesheet" href="src/style.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Baskervville"
       rel="stylesheet"
@@ -12,12 +12,12 @@
   </head>
   <body>
     <header>
-      <div class="logo">
-        Rain Check <span class="logo-emoji">☔️</span>
-        <p class="logo-text">A weather app project for SheCodes</p>
+      <div id="logo">
+        Rain Check <span id="logo-emoji">☔️</span>
+        <p id="logo-text">A weather app project for SheCodes</p>
       </div>
       <p id="clock">Friday 11:30</p>
-      <div class="search-bar">
+      <div id="search-bar">
         <input
           type="search"
           id="search-input"
@@ -29,44 +29,34 @@
     </header>
     <main>
       <div class="weather-section">
-        <div class="weather-section-top">
-          <p class="weather-emoji">🌧️</p>
-          <div class="current-city">
-            <h1>London</h1>
-            <h2>OVERCAST CLOUDS</h2>
+        <div class="weather-section-row">
+          <p id="weather-emoji">🌧️</p>
+          <div>
+            <p id="name">London</p>
+            <p id="comment">OVERCAST CLOUDS</p>
           </div>
         </div>
-        <div class="weather-section-bottom">
-          <h3>18°C</h3>
-          <div class="current-data">
-            <p>Humidity: 62%</p>
-            <p>Wind: 2.57km/h</p>
+        <div class="weather-section-row">
+          <div id="temperature-section">
+            <p><span id="temperature">18</span>°C</p>
+          </div>
+          <div id="data-section">
+            <p>Humidity: <span id="humidity">62</span>%</p>
+            <p>Wind: <span id="wind">2.57</span>km/h</p>
           </div>
         </div>
       </div>
     </main>
     <footer>
       This project was coded by
-      <a
-        href="https://github.com/DaniSurname/"
-        target="_blank"
-        class="footer-link"
+      <a href="https://github.com/DaniSurname/" target="_blank"
         >Dani Wilkinson</a
       >, is open-sourced on
-      <a
-        href="https://github.com/DaniSurname/weather-app/"
-        target="_blank"
-        class="footer-link"
-      >
+      <a href="https://github.com/DaniSurname/weather-app/" target="_blank">
         GitHub</a
       >
       and hosted on
-      <a
-        href="https://dani-shecodes.netlify.app/"
-        target="_blank"
-        class="footer-link"
-        >Netlify</a
-      >.
+      <a href="https://dani-shecodes.netlify.app/" target="_blank">Netlify</a>.
     </footer>
   </body>
 </html>
