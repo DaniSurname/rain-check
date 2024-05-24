@@ -3,23 +3,66 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/index.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Baskervville"
+      rel="stylesheet"
+    />
     <title>Rain Check | Weather App</title>
   </head>
   <body>
-    <h1>Hello world!</h1>
+    <header>
+      <p id="clock">Friday 11:30</p>
+      <div class="search-bar">
+        <input
+          type="search"
+          id="search-input"
+          placeholder="Search for a city..."
+          required
+        />
+        <input type="submit" id="search-button" value="🔍" />
+      </div>
+    </header>
+    <main>
+      <div class="weather-section">
+        <div class="weather-section-top">
+          <p class="weather-emoji">🌧️</p>
+          <div class="current-city">
+            <h1>London</h1>
+            <h2>OVERCAST CLOUDS</h2>
+          </div>
+        </div>
+        <div class="weather-section-bottom">
+          <h3>18°C</h3>
+          <div class="current-data">
+            <p>Humidity: 62%</p>
+            <p>Wind: 2.57km/h</p>
+          </div>
+        </div>
+      </div>
+    </main>
     <footer>
       This project was coded by
-      <a href="https://github.com/DaniSurname/" target="_blank"
+      <a
+        href="https://github.com/DaniSurname/"
+        target="_blank"
+        class="footer-link"
         >Dani Wilkinson</a
+      >, is open-sourced on
+      <a
+        href="https://github.com/DaniSurname/weather-app/"
+        target="_blank"
+        class="footer-link"
       >
-      and is
-      <a href="https://github.com/DaniSurname/weather-app/" target="_blank">
-        on GitHub</a
+        GitHub</a
       >
-      and
-      <a href="https://dani-shecodes.netlify.app/" target="_blank"
-        >hosted on Netlify</a
-      >
+      and hosted on
+      <a
+        href="https://dani-shecodes.netlify.app/"
+        target="_blank"
+        class="footer-link"
+        >Netlify</a
+      >.
     </footer>
   </body>
 </html>
