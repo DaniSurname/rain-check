@@ -8,6 +8,7 @@ header {
   max-width: 600px;
   display: block;
   margin: 50px auto;
+  padding: 0 20px;
 }
 
 main {
@@ -102,7 +103,7 @@ p {
 
 .search-bar {
   display: grid;
-  grid-template-columns: 4fr 1fr;
+  grid-template-columns: 5fr 1fr;
   margin-top: 10px;
 }
 
