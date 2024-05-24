@@ -12,6 +12,11 @@ header {
   display: block;
   margin: 50px auto;
   padding: 0 20px;
+
+  @media (max-width: 600px) {
+    margin-top: 60px;
+    margin-bottom: 40px;
+  }
 }
 
 main {
@@ -25,6 +30,11 @@ footer {
   color: #84828a;
   text-align: center;
   margin: 20px;
+
+  @media (max-width: 600px) {
+    font-size: 3vw;
+    margin-top: 40px;
+  }
 }
 
 /* HTML elements */
@@ -70,14 +80,26 @@ footer > a:hover {
   font-size: 20px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
   text-align: right;
+
+  @media (max-width: 600px) {
+    font-size: 5vw;
+  }
 }
 
 #logo-emoji {
   font-size: 25px;
+
+  @media (max-width: 600px) {
+    font-size: 6vw;
+  }
 }
 
 #logo-text {
-  font-size: 10px;
+  font-size: 8px;
+
+  @media (max-width: 600px) {
+    font-size: 2vw;
+  }
 }
 
 /* Header content */
@@ -85,6 +107,10 @@ footer > a:hover {
 #clock {
   font-size: 30px;
   color: #84828a;
+
+  @media (max-width: 600px) {
+    font-size: 8vw;
+  }
 }
 
 #search-bar {
@@ -117,16 +143,28 @@ footer > a:hover {
   padding-right: 20px;
   font-size: 100px;
   text-align: right;
+
+  @media (max-width: 600px) {
+    font-size: 15vw;
+  }
 }
 
 #name {
   font-size: 80px;
   text-align: center;
+
+  @media (max-width: 600px) {
+    font-size: 10vw;
+  }
 }
 
 #comment {
   font-size: 25px;
   text-align: center;
+
+  @media (max-width: 600px) {
+    font-size: 4vw;
+  }
 }
 
 /* Bottom weather section  */
@@ -135,12 +173,22 @@ footer > a:hover {
   font-size: 60px;
   margin: 0 20px 0 0;
   text-align: right;
+
+  @media (max-width: 600px) {
+    font-size: 10vw;
+  }
 }
 
 #data-section {
   margin: 15px 0 0 15px;
   font-size: 25px;
-  line-height: 30px;
+  line-height: 1.8rem;
+
+  @media (max-width: 600px) {
+    font-size: 4.5vw;
+    line-height: 5vw;
+    margin: 0;
+  }
 }
 
 #temperature,
