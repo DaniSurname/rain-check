@@ -1,3 +1,22 @@
+function formatTime(time) {
+  // Formats current date and time
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[time.getDay()];
+
+  let hour = time.getHours().toString().padStart(2, "0");
+  let minute = time.getMinutes().toString().padStart(2, "0");
+
+  return `${day} ${hour}:${minute}`;
+}
+
 function updateInfo(response) {
   // Updates city name element
   let nameElement = document.querySelector("#name");
@@ -16,6 +35,10 @@ function updateInfo(response) {
   // Updates wind element
   let windElement = document.querySelector("#wind");
   windElement.innerHTML = response.data.wind.speed;
+  //  Updates clock element
+  let clockElement = document.querySelector("#clock");
+  let time = new Date();
+  clockElement.innerHTML = formatTime(time);
 }
 // console.log(comment);
 
