@@ -56,7 +56,7 @@ footer > a:hover {
 /* Weather section layout */
 
 .weather-section {
-  max-width: 600px;
+  max-width: 800px;
   display: block;
   margin: 0 auto;
   color: #bdbdbd;
@@ -149,7 +149,7 @@ footer > a:hover {
 }
 
 #name {
-  font-size: 80px;
+  font-size: 60px;
   text-align: center;
 
   @media (max-width: 600px) {
