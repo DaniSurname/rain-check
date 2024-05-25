@@ -40,7 +40,7 @@ function updateInfo(response) {
   windElement.innerHTML = response.data.wind.speed;
   //  Updates clock element
   let clockElement = document.querySelector("#clock");
-  let time = new Date();
+  let time = new Date(); // or new Date(response.data.time * 1000);
   clockElement.innerHTML = formatTime(time);
 }
 // console.log(comment);
