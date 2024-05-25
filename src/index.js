@@ -20,14 +20,17 @@ function updateInfo(response) {
 // console.log(comment);
 
 function searchCity(city) {
+  // Makes API call using city input
   let apiKey = "384f9t60d2a80f6f159b0a59do1ee44d";
   let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+  // Sends API response to updateInfo function
   axios.get(apiUrl).then(updateInfo);
 }
 function getCity(event) {
   event.preventDefault();
+  // Recieves city input from the user
   let searchInput = document.querySelector("#search-input");
-  let nameElement = document.querySelector("#name");
+  // Sends city input to the searchCity function
   searchCity(searchInput.value);
 }
 
