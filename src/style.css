@@ -138,14 +138,13 @@ footer > a:hover {
 
 /* Top weather section  */
 
-#weather-emoji {
-  margin: 0;
-  padding-right: 20px;
-  font-size: 100px;
-  text-align: right;
+#weather-emoji-icon {
+  width: 100px;
+  height: 100px;
 
   @media (max-width: 600px) {
-    font-size: 15vw;
+    width: 80%;
+    height: auto;
   }
 }
 

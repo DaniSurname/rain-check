@@ -25,6 +25,9 @@ function updateInfo(response) {
   let commentElement = document.querySelector("#comment");
   let comment = response.data.condition.description;
   commentElement.innerHTML = comment.toUpperCase();
+  //  Updates weather emoji
+  let emojiElement = document.querySelector("#weather-emoji");
+  emojiElement.innerHTML = `<img src="${response.data.condition.icon_url}" alt="${response.data.condition.icon}" id="weather-emoji-icon" />`;
   // Updates temperature element
   let temperatureElement = document.querySelector("#temperature");
   let temperature = response.data.temperature.current;
