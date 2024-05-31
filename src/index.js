@@ -19,10 +19,10 @@ function formatTime(time) {
 
 function updateInfo(response) {
   // Updates city name element
-  let nameElement = document.querySelector("#name");
+  let nameElement = document.querySelector("#city-name");
   nameElement.innerHTML = response.data.city;
   // Updates comment element
-  let commentElement = document.querySelector("#comment");
+  let commentElement = document.querySelector("#city-comment");
   let comment = response.data.condition.description;
   commentElement.innerHTML = comment.toUpperCase();
   //  Updates weather emoji
@@ -60,7 +60,33 @@ function getCity(event) {
   searchCity(searchInput.value);
 }
 
+function displayForecast() {
+  let days = ["Tue", "Wed", "Thurs", "Fri", "Sat"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `
+        <div class="forecast-section-col">
+          <div class="forecast-date">${day}</div>
+          <div class="forecast-emoji">☀️</div>
+          <div class="forecast-temps">
+            <span class="forecast-temp-min">5°C</span> to
+            <span class="forecast-temp-max">
+              <strong>16°C</strong>
+            </span>
+          </div>
+        </div>
+      `;
+  });
+
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = forecastHtml;
+}
+
 let searchBar = document.querySelector("#search-bar");
 searchBar.addEventListener("submit", getCity);
 
 searchCity("London");
+displayForecast();
