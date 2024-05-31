@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Baskervville"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Rain Check | Weather App</title>
+  </head>
+  <body>
+    <header>
+      <div id="logo">
+        Rain Check <span id="logo-emoji">☔️</span>
+        <p id="logo-text">A weather app project for SheCodes</p>
+      </div>
+      <p id="clock"></p>
+      <form id="search-bar">
+        <input
+          type="search"
+          id="search-input"
+          placeholder="Search for a city..."
+          required
+        />
+        <input type="submit" id="search-button" value="🔍" />
+      </form>
+    </header>
+    <main>
+      <div class="weather-section">
+        <div class="weather-section-row">
+          <div id="weather-emoji"></div>
+          <div>
+            <p id="name"></p>
+            <p id="comment"></p>
+          </div>
+        </div>
+        <div class="weather-section-row">
+          <div id="temperature-section">
+            <p><span id="temperature"></span>°C</p>
+          </div>
+          <div id="data-section">
+            <p>Humidity: <span id="humidity"></span>%</p>
+            <p>Wind: <span id="wind"></span>km/h</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      This project was coded by
+      <a href="https://github.com/DaniSurname/" target="_blank"
+        >Dani Wilkinson</a
+      >, is open-sourced on
+      <a href="https://github.com/DaniSurname/weather-app/" target="_blank">
+        GitHub</a
+      >
+      and hosted on
+      <a href="https://dani-shecodes.netlify.app/" target="_blank">Netlify</a>.
+    </footer>
+    <script src="src/index.js"></script>
+  </body>
+</html>
