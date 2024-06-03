@@ -61,27 +61,35 @@ function getCity(event) {
   searchCity(searchInput.value);
 }
 
-function displayForecast(response) {
-  console.log(response.data);
+function formatDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let days = ["Sun", "Mon", "Tues", "Wed", "Thus", "Fri", "Sat"];
 
-  let days = ["Tue", "Wed", "Thurs", "Fri", "Sat"];
+  return days[date.getDay()];
+}
+
+function displayForecast(response) {
   let forecastHtml = "";
 
-  days.forEach(function (day) {
-    forecastHtml =
-      forecastHtml +
-      `
+  response.data.daily.forEach(function (day, index) {
+    if (index < 5) {
+      forecastHtml =
+        forecastHtml +
+        `
         <div class="forecast-section-col">
-          <div class="forecast-date">${day}</div>
-          <div class="forecast-emoji">☀️</div>
-          <div class="forecast-temps">
-            <span class="forecast-temp-min">5°C</span> to
+          <div class="forecast-date">${formatDay(day.time)}</div>
+           <img src="${day.condition.icon_url}" class="forecast-emoji" />
+          <div class="forecast-temps">From
+            <span class="forecast-temp-min">${Math.round(
+              day.temperature.minimum
+            )}°C</span> <br />to
             <span class="forecast-temp-max">
-              <strong>16°C</strong>
+              <strong>${Math.round(day.temperature.maximum)}°C</strong>
             </span>
           </div>
         </div>
       `;
+    }
   });
 
   let forecastElement = document.querySelector("#forecast");
